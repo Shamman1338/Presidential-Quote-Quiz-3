@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Times_Table" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRI-1w-O81">
+                                <rect key="frame" x="268" y="199" width="64" height="30"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4BA-zA-pfG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grv-ae-ajb">
+                                <rect key="frame" x="215" y="282" width="217" height="365"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Times Table" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dik-yi-fO5">
+                                <rect key="frame" x="252" y="51" width="180" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-z6-vCY">
+                                <rect key="frame" x="252" y="141" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941177189350128" green="0.0" blue="0.56470590829849243" alpha="1" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="dik-yi-fO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DKA-dP-JGt"/>
+                            <constraint firstItem="grv-ae-ajb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fTP-tw-2KD"/>
+                            <constraint firstItem="VRI-1w-O81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fkC-be-562"/>
+                            <constraint firstItem="dik-yi-fO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jjd-CN-PFK"/>
+                            <constraint firstItem="kNf-z6-vCY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waN-sn-4NX"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SZK-3a-g14" appends="YES" id="J5c-AC-mA7"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="grv-ae-ajb" id="nal-dg-SIw"/>
+                        <outlet property="calculateButton" destination="VRI-1w-O81" id="VxN-NM-WYq"/>
+                        <outlet property="numberTextFeild" destination="kNf-z6-vCY" id="3bs-Nk-Elx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SZK-3a-g14">
+                    <connections>
+                        <action selector="onTapGesture:" destination="BYZ-38-t0r" id="Vy7-SX-q2K"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="288" y="321"/>
+        </scene>
+    </scenes>
+</document>
